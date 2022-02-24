@@ -1,0 +1,44 @@
+{
+  "register": [
+    {
+      "name": "SKR",
+      "email": "skrhelpline@gmail.com",
+      "mobilenumber": "9888797970",
+      "designation": "professor",
+      "gender": "male",
+      "course": "Angular",
+      "remember": true,
+      "id": 2
+    },
+    {
+      "name": "SSKR",
+      "email": "sskrhelpline@gmail.com",
+      "mobilenumber": "9888797988",
+      "designation": "Trainee",
+      "gender": "male",
+      "course": "React",
+      "remember": true,
+      "id": 3
+    },
+    {
+      "name": "SSKRSKR",
+      "email": "skrskr@gmail.com",
+      "mobilenumber": "9834797970",
+      "designation": "Engineer",
+      "gender": "male",
+      "course": "Bootstrap",
+      "remember": true,
+      "id": 4
+    },
+    {
+      "name": "SKR",
+      "email": "skrhelpline@gmail.com",
+      "mobilenumber": "9888797970",
+      "designation": "professor",
+      "gender": "male",
+      "course": "mongoDB",
+      "remember": true,
+      "id": 5
+    }
+  ]
+}

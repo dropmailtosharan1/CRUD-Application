@@ -1,0 +1,58 @@
+<div class="box">
+    <h2>Login Register</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="Save()">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group inputBox">
+                    <label>username:</label>
+                    <input type="text" formControlName="username" class="form-control" required
+                    [class.is-valid]="registrationForm.get('username').invalid && 
+                    registrationForm.get('username').touched">
+                    <div *ngIf="registrationForm.get('username').invalid && registrationForm
+                    .get('username').touched">
+                        <small class="text-danger" *ngIf="registrationForm.get('username')
+                        .errors?.required">Username is Required</small>
+                        <small class="text-danger" *ngIf="registrationForm.get('username')
+                        .errors?.minlength">Username must be atleast 5 characters</small>
+                    </div>
+
+                    <!-- <span class="text-danger" *ngIf="(registrationForm.controls['username']
+                    .touched && registrationForm.controls['username'].invalid) || 
+                    registrationForm.controls['username'].invalid && isvalid">Username required</span> -->
+                </div>
+                &nbsp;
+                <div class="form-group inputBox">
+                    <label>Password:</label>
+                    <input type="password" formControlName="password" class="form-control" required
+                    [class.is-invalid]="registrationForm.get('password').invalid && 
+                    registrationForm.get('password').touched">
+                    <small class="text-danger">Password Required</small>
+                </div>
+                &nbsp;
+                <div class="form-group inputBox">
+                    <label>Confirm Password:</label>
+                    <input type="password" formControlName="confirmPassword" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group inputBox">
+                    <label>City:</label>
+                    <input type="text" formControlName="city" class="form-control" required>
+                </div>
+                <div class="form-group inputBox">
+                    <label>State:</label>
+                    <input type="text" formControlName="state" class="form-control" required>
+                </div>
+                <div class="form-group inputBox">
+                    <label>Pincode:</label>
+                    <input type="text" formControlName="pincode" class="form-control" required>
+                </div>
+            </div>
+        </div>
+        <input type="submit" name="submit" value="Register">
+        <input (click)="displayValues()" type="button" name="Display" value="Display">
+    </form> <br>
+    <div class="myValues">
+        {{registrationForm.value | json}}
+    </div>
+</div>

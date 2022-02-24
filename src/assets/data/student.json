@@ -1,0 +1,6 @@
+[
+    {"id":1,"name":"Rama","course":"Angular"},
+    {"id":2,"name":"Sita","course":"React"},
+    {"id":3,"name":"Lakshman","course":"Vue"},
+    {"id":4,"name":"Ravana","course":"Bootstrap"}
+]

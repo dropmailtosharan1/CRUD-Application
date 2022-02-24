@@ -1,0 +1,27 @@
+.example-container {
+    padding-top: 60px;
+    width: 90%;
+    min-height: 500px;
+    /* height: 100%; */
+    /* margin: 10px; */
+    /* border: 1px solid #555; */
+  }
+ .skr{
+     /* color: red; */
+     text-align: center;
+     font-family: play;
+     font-size: 50px;
+     margin-top: 10px;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+/* .footer{ position: fixed; left: 0; bottom: 0; width: 100%; background-color: blue;
+    color: white; text-align: center; font-weight: bolder; }
+li{ margin-right: 10px;}
+*{ margin: 5px;} */
+.my-background{
+    border: 0; padding: 0; background-size: cover; font-family: play; color: blue;
+    width:100%; height: 625px; background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN2-3PkBvynEvYihXLebNrliQpQKsDbZCLqQ&usqp=CAU");
+    text-align: center; 
+}

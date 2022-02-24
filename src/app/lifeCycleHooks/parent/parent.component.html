@@ -1,0 +1,7 @@
+<div class="myDiv">
+    <app-child [myNumber]="counter" *ngIf="isVisible"></app-child> 
+    <!-- <app-child></app-child> -->
+    <button type="button" class="btn btn-primary" (click)="increment()">+1</button> &nbsp;
+    <button type="button" class="btn btn-danger" (click)="decrement()">-1</button> &nbsp;
+    <button type="button" class="btn btn-warning" (click)="switchVisibility()">Destroy</button>
+</div>

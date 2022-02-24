@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+nav a { padding: 15px 20px; text-decoration: none; margin-top: 10px; display: inline; 
+ background-color: #eee; border-radius: 4px; margin-left: 20px; cursor: pointer; } 
+nav a:visited, a:link { color: #3643b6; }
+nav a:hover{ color: #fff; background-color: #3643b6;}
+nav a.active{ color: #ce2b2b; background-color: #49ce0c;}
+
