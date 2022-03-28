@@ -9,8 +9,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     <p> {{name.toUpperCase()}} </p>
     <p> {{userName()}}</p>
     <p> {{myUrl}} </p>
-    <br> <br> -->
-    <div>Course :  <input [id]="courseId" type="text" value="Angular 12"> </div> <br> <br>
+    <br> <br> --> 
+    <div>Course :  <input [id]="courseId" type="text" value="Angular 12"> </div> &nbsp; <br> 
+    <button class="btn btn-success" (click)="onSubmit()"> Submit </button>
+    <br> <br>
     <div>Course :  <input [disabled]="isDisabled" id={{courseId}} type="text" value="Angular 12"> </div>
     <h2> SKR Helpline </h2>
     <h2 class="TextColor"> SKR Helpline </h2>
@@ -20,7 +22,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     <h2 [class.TextSize]="required"> SKR Helpline </h2>
     <h2 [ngClass]="Group"> SKR Helpline </h2>
     <h2 [style.color]="'blue'"> SKR Style Binding </h2>
-    <h2 [style.color]="myColor"> SKR Style Binding </h2>
+    <h2 [style.color]="myColor"> SKR Style Binding Mycolor </h2>
     <h2 [style.color]="required ? 'green' : 'red'"> SKR Style Binding </h2>
     <h2 [ngStyle]="myStyles"> SKR Style Binding </h2>
     <br> <br>
@@ -46,7 +48,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     <div *ngFor="let x of subjects; odd as e">
       <h2> {{e}} ---> {{x}} </h2>
     </div> 
-
     <h1> {{parent}} </h1>
     <button (click)="fireEvent()">Click Me</button>
     <br> <br> 
@@ -82,30 +83,29 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   .TextStyle{  font-style:italic }
   .switchCase{ font-size:60px;  color:blue;  font-width:bold;  text-align:center;}
   `
-]
+  ]
 })
 export class TestComponent implements OnInit {
-  name="SKR Helpline";  myUrl=window.location.href;  courseId='';  isDisabled=true;
-  myText="TextColor";  myText1="TextSize";  myText2="TextStyle";  required=false;
-  Group={    "TextColor":this.required, "TextSize":this.required, "TextStyle":this.required  }
-  myColor="orange"; myStyles={color:"gold", fontStyle:"italic", fontSize:"50px"} 
-  greetings="";  data="";  status=false;
-  myChoice="three";  subjects=["Angular","React","Vue","HTML","CSS","Bootstrap"];
-  msg1="Welcome to SKR Helpline";   person={"firstName":"SKR", "secondName":"Helpline"}
-  date=new Date();
+  name = "SKR Helpline"; myUrl = window.location.href; courseId = ''; isDisabled = true;
+  myText = "TextColor"; myText1 = "TextSize"; myText2 = "TextStyle"; required = false;
+  Group = { "TextColor": this.required, "TextSize": this.required, "TextStyle": this.required }
+  myColor = "orange"; myStyles = { color: "gold", fontStyle: "italic", fontSize: "50px" }
+  greetings = ""; data = ""; status = false;
+  myChoice = "three"; subjects = ["Angular", "React", "Vue", "HTML", "CSS", "Bootstrap"];
+  msg1 = "Welcome to SKR Helpline"; person = { "firstName": "SKR", "secondName": "Helpline" }
+  date = new Date();
 
   //@Input() fromParent:any; 
-  @Input('fromParent') parent:any;
-  @Output() childInfo=new EventEmitter();
+  @Input('fromParent') parent: any;
+  @Output() childInfo = new EventEmitter();
   constructor() { }
 
-  ngOnInit(): void {  }
-  userName(){    return "Welcome: " + this.name;  }
-  onClick(){    //console.log("Welcome to SKR helpline");
-  this.greetings="Welcome to SKR helpline" ;  }
-  message(message:any){    console.log(message);  }
-
-  fireEvent(){    this.childInfo.emit("This is From Child");  }
-
-
+  ngOnInit(): void { }
+  onSubmit() { console.log("Angular"); }
+  userName() { return "Welcome: " + this.name; }
+  onClick() {    //console.log("Welcome to SKR helpline");
+    this.greetings = "Welcome to SKR helpline";
+  }
+  message(message: any) { console.log(message); }
+  fireEvent() { this.childInfo.emit("This is From Child"); }
 }
